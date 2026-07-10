@@ -20,7 +20,7 @@ export const promptsOverlay: JourneyOverlay = {
     'Créez un briefing de réunion de compte à l’aide de Prompt Builder et d’un flux déclenché par planification.',
   difficulty: 'Admin débutant à intermédiaire',
   purpose:
-    "Créez une automatisation où, chaque matin, Salesforce identifie les comptes cibles, exécute un briefing généré par l'IA via Prompt Builder, puis enregistre du HTML propre dans Account_Meeting_Briefing__c.",
+    "Planifiez des flux automatisés qui exploitent l'IA Salesforce (Prompt Builder) pour générer des briefings, résumés et recommandations — puis stockez les résultats directement sur vos enregistrements.",
   includes: [
     'Autorisations',
     'Champ texte enrichi',
@@ -55,7 +55,7 @@ export const promptsOverlay: JourneyOverlay = {
             },
             {
               field: 'Champ personnalisé',
-              value: 'Account_Meeting_Briefing__c prévu en Rich Text Area',
+              value: 'Créez un champ Rich Text Area sur l\'objet cible de votre prompt (ex : Account_Meeting_Briefing__c sur Compte pour un briefing meeting)',
             },
           ],
           whyItMatters:

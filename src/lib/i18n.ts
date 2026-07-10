@@ -27,9 +27,11 @@ const en = {
   'reset.confirm': 'Reset all progress, notes, and checklists? This cannot be undone.',
   'reset.title': 'Reset all saved progress',
   'reset.label': 'Reset',
-  'header.brand': 'SF AI Admin Guide',
+  'header.brand': 'AI Admin Guide',
   'nav.primary': 'Primary',
   'nav.home': 'Home',
+  'nav.agentforce': 'Agentforce Coworker',
+  'nav.prompts': 'Personalized Prompts',
   'nav.library': 'Library',
   'nav.troubleshoot': 'Troubleshoot',
   'lang.group': 'Language',
@@ -88,6 +90,18 @@ const en = {
   'journey.phaseBadge': 'Phase {n}',
   'journey.progressAria': '{title} progress',
   'journey.announce': 'Now on {title}',
+  'journey.promptsIntro1':
+    'Together we will build an ',
+  'journey.promptsIntroBold':
+    'Account Summary Prompt',
+  'journey.promptsIntro2':
+    ' on the Account object. As a Salesforce Administrator, the following steps will guide you through key actions to schedule an account summary for your users.',
+  'journey.promptsIntroNote1':
+    'Note: In the ',
+  'journey.promptsIntroNoteLink':
+    'Library',
+  'journey.promptsIntroNote2':
+    ' you will find other prompts that you can customize.',
 
   // Step card
   'gating.required': 'Required',
@@ -158,6 +172,8 @@ const en = {
   'library.all': 'All ({n})',
   'library.openCustomize': 'Open & customize',
   'library.copyTemplate': 'Copy template',
+  'library.tokenWarning':
+    'Warning: Running these prompts consumes tokens. Make sure to check the volume of data to process in order to manage your allocation.',
 
   // Prompt customizer
   'cz.tone.concise': 'Concise',
@@ -182,6 +198,8 @@ const en = {
   'cz.howToUse': 'How to use it',
   'cz.howToUseBody':
     'Paste this into your Prompt Template body in Prompt Builder. The merge fields (e.g. {s}) resolve inside Salesforce — keep them exactly as shown.',
+  'cz.inputWarning':
+    'Make sure to add the correct Input resources in your Prompt Template, especially when using "RecordSnapshot" — the object and fields must match your target.',
 
   // Troubleshooting
   'ts.journeyLabel.agentforce': 'Agentforce',
@@ -283,9 +301,11 @@ const fr: Record<UIKey, string> = {
     'Réinitialiser toute la progression, les notes et les listes de contrôle ? Cette action est irréversible.',
   'reset.title': 'Réinitialiser toute la progression enregistrée',
   'reset.label': 'Réinitialiser',
-  'header.brand': 'Guide Admin IA SF',
+  'header.brand': 'Guide Admin IA',
   'nav.primary': 'Principale',
   'nav.home': 'Accueil',
+  'nav.agentforce': 'Agentforce Coworker',
+  'nav.prompts': 'Prompts Personnalisés',
   'nav.library': 'Bibliothèque',
   'nav.troubleshoot': 'Dépannage',
   'lang.group': 'Langue',
@@ -344,6 +364,18 @@ const fr: Record<UIKey, string> = {
   'journey.phaseBadge': 'Phase {n}',
   'journey.progressAria': 'Progression : {title}',
   'journey.announce': 'Section actuelle : {title}',
+  'journey.promptsIntro1':
+    'Nous allons construire ensemble un ',
+  'journey.promptsIntroBold':
+    'Prompt de résumé de compte',
+  'journey.promptsIntro2':
+    " sur l'objet Compte. En tant qu'Administrateur Salesforce, les prochaines étapes vous donneront les étapes clés pour planifier un résumé de comptes pour vos utilisateurs.",
+  'journey.promptsIntroNote1':
+    'Note : Dans la ',
+  'journey.promptsIntroNoteLink':
+    'Bibliothèque',
+  'journey.promptsIntroNote2':
+    " vous trouverez d'autres prompts que vous pourrez personnaliser.",
 
   // Step card
   'gating.required': 'Obligatoire',
@@ -415,6 +447,8 @@ const fr: Record<UIKey, string> = {
   'library.all': 'Tous ({n})',
   'library.openCustomize': 'Ouvrir et personnaliser',
   'library.copyTemplate': 'Copier le modèle',
+  'library.tokenWarning':
+    'Attention : L\'exécution de ces prompts consomme des tokens. Pensez à bien vérifier le volume de données à traiter afin de maîtriser votre allocation.',
 
   // Prompt customizer
   'cz.tone.concise': 'Concis',
@@ -439,6 +473,8 @@ const fr: Record<UIKey, string> = {
   'cz.howToUse': "Comment l'utiliser",
   'cz.howToUseBody':
     'Collez ceci dans le corps de votre modèle de prompt dans Prompt Builder. Les champs de fusion (ex. {s}) se résolvent dans Salesforce — conservez-les exactement tels quels.',
+  'cz.inputWarning':
+    "Assurez-vous d'ajouter les bonnes ressources Input dans votre Prompt Template, notamment lors de l'utilisation de « RecordSnapshot » — l'objet et les champs doivent correspondre à votre cible.",
 
   // Troubleshooting
   'ts.journeyLabel.agentforce': 'Agentforce',

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CheckCircle2, Circle, HelpCircle, Target } from 'lucide-react';
 import type { JourneyId, Step } from '../lib/types';
 import { useAppDispatch, useAppState } from '../lib/state';
@@ -7,6 +8,40 @@ import { Callout } from './ui/Callout';
 import { CopyBlock } from './CopyBlock';
 import { ExpandableSection } from './ui/ExpandableSection';
 import { NavPathDisplay } from './ui/NavPathDisplay';
+
+/** Lightbox: click thumbnail to open full-size overlay, click overlay to close. */
+function ImageLightbox({ src, alt }: { src: string; alt: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="group mt-3 block w-full cursor-zoom-in overflow-hidden rounded-lg border border-slate-200 shadow-sm transition-shadow hover:shadow-md"
+      >
+        <img
+          src={src}
+          alt={alt}
+          className="w-full rounded-lg object-cover transition-transform group-hover:scale-[1.01]"
+        />
+      </button>
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <img
+            src={src}
+            alt={alt}
+            className="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl cursor-zoom-out"
+          />
+        </div>
+      )}
+    </>
+  );
+}
 
 const GATING_BADGE: Record<Step['gating'], { tone: BadgeTone; labelKey: UIKey }> = {
   required: { tone: 'danger', labelKey: 'gating.required' },
@@ -137,6 +172,10 @@ export function StepCard({
             ))}
           </ol>
         </div>
+      )}
+
+      {step.previewImg && (
+        <ImageLightbox src={step.previewImg} alt={step.title} />
       )}
 
       {step.valuesToEnter && step.valuesToEnter.length > 0 && (

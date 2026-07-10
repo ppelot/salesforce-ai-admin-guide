@@ -75,6 +75,7 @@ export const agentforceOverlay: JourneyOverlay = {
         'af-enable-einstein': {
           title: 'Activer Einstein',
           compactLabel: 'Activer Einstein',
+          previewImg: 'https://i.postimg.cc/nV6M8FNr/Einstein-Setup.jpg',
           summary:
             'Einstein est la base de toutes les fonctionnalités d’IA générative. Il doit être activé avant que les options Agentforce n’apparaissent.',
           instructions: [
@@ -97,6 +98,7 @@ export const agentforceOverlay: JourneyOverlay = {
         'af-enable-agentforce': {
           title: 'Activer Agentforce',
           compactLabel: 'Activer Agentforce',
+          previewImg: 'https://i.postimg.cc/Qx1CjL3x/Enable-Agentforce.jpg',
           summary:
             'Activez Agentforce dans Agent Studio. Cela déverrouille les pages de configuration d’Agentforce Coworker.',
           instructions: [
@@ -118,6 +120,7 @@ export const agentforceOverlay: JourneyOverlay = {
         'af-enable-data360': {
           title: 'Activer Data 360 / Data Cloud (si nécessaire)',
           compactLabel: 'Activer Data 360 si nécessaire',
+          previewImg: 'https://i.postimg.cc/R0Vw3CSK/Data-Cloud-Setup.jpg',
           summary:
             'Data 360 (Data Cloud) peut être requis pour des sources de données connectées ou externes. Activez-le si votre org ne l’a pas déjà fait.',
           instructions: [
@@ -140,6 +143,7 @@ export const agentforceOverlay: JourneyOverlay = {
         'af-confirm-permsets': {
           title: "Confirmer les ensembles d'autorisations admin",
           compactLabel: "Attribuer les ensembles d'autorisations admin",
+          previewImg: 'https://i.postimg.cc/13494Lx6/Permission-Set-Coworker.jpg',
           summary:
             "Assurez-vous que votre propre utilisateur admin possède les deux ensembles d'autorisations Agentforce Coworker, sinon l'activation peut être bloquée.",
           instructions: [
@@ -206,6 +210,7 @@ export const agentforceOverlay: JourneyOverlay = {
           ],
           whyItMatters:
             "C'est le point de lancement de tout le processus d'activation.",
+          previewImg: 'https://i.postimg.cc/g0NQR03K/coworker-step1.jpg',
         },
         'af-t-step2': {
           title: "Étape 2 — Passer en revue la page de configuration d'Agentforce Coworker",
@@ -218,6 +223,7 @@ export const agentforceOverlay: JourneyOverlay = {
           ],
           whyItMatters:
             "Cette page est le centre de contrôle de l'activation, des données, de l'expérience utilisateur final et de l'accès. Connaître sa disposition accélère les étapes suivantes.",
+          previewImg: 'https://i.postimg.cc/QN0zyCPN/coworker-turnon.jpg',
         },
         'af-t-step3': {
           title: 'Étape 3 — Passer en revue les options « Manage Data »',
@@ -236,6 +242,7 @@ export const agentforceOverlay: JourneyOverlay = {
               body: "La configuration d'Agentforce Coworker est en grande partie automatisée. Certaines étapes peuvent prendre quelques minutes.",
             },
           },
+          previewImg: 'https://i.postimg.cc/bN4nTXxy/coworker-managedata.jpg',
         },
         'af-t-step4': {
           title: 'Étape 4 — Confirmer les sources de données disponibles',
@@ -290,6 +297,7 @@ export const agentforceOverlay: JourneyOverlay = {
               body: "Vous devez cliquer sur « Manage » et accepter les conditions de la bêta ici. Sauter cette étape est la raison la plus fréquente pour laquelle le bouton Coworker n'apparaît jamais pour les utilisateurs.",
             },
           },
+          previewImg: 'https://i.postimg.cc/6Bcd4PSz/coworker-turnonuser.jpg',
         },
         'af-t-step7': {
           title: "Étape 7 — Donner l'accès aux utilisateurs",
@@ -305,6 +313,7 @@ export const agentforceOverlay: JourneyOverlay = {
           ],
           whyItMatters:
             "Seuls les utilisateurs attribués peuvent voir et utiliser Agentforce Coworker, même une fois l'expérience activée.",
+          previewImg: 'https://i.postimg.cc/RZNBv8yW/coworker-manageuser.jpg',
         },
         'af-t-step8': {
           title: "Étape 8 — Confirmer l'attribution",

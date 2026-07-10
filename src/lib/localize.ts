@@ -50,6 +50,7 @@ export interface StepOverlay {
   whyItMatters?: string;
   beginnerTip?: string;
   passCriteria?: string;
+  previewImg?: string;
   warnings?: Record<string, WarningOverlay>;
   copyBlocks?: Record<string, string>;
 }
@@ -156,6 +157,7 @@ function mergeStep(base: Step, ov?: StepOverlay): Step {
     whyItMatters: ov.whyItMatters ?? base.whyItMatters,
     beginnerTip: ov.beginnerTip ?? base.beginnerTip,
     passCriteria: ov.passCriteria ?? base.passCriteria,
+    previewImg: ov.previewImg ?? base.previewImg,
     warnings: mergeWarnings(base.warnings, ov.warnings),
     copyBlocks: mergeCopyBlockLabels(base.copyBlocks, ov.copyBlocks),
   };

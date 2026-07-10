@@ -13,9 +13,9 @@ import type { PromptOverlay } from '../lib/localize';
 
 export const promptLibraryOverlay: Record<string, PromptOverlay> = {
   'account-summary-prompt': {
-    title: 'Prompt de résumé de compte (Field Generation)',
+    title: 'Prompt de résumé de compte',
     description:
-      'Le prompt « Field Generation » principal utilisé par le flux planifié pour écrire un briefing dans un champ.',
+      "Prompt généré par l'IA utilisé pour écrire un briefing, résumé ou recommandation.",
     outputFormat: 'Texte enrichi HTML (moins de 200 mots)',
   },
   'super-sales-prompt': {

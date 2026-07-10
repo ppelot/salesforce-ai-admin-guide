@@ -9,9 +9,9 @@ import type { Prompt } from '../lib/types';
 export const prompts: Prompt[] = [
   {
     id: 'account-summary-prompt',
-    title: 'Account Summary Prompt (Field Generation)',
+    title: 'Account Summary Prompt',
     description:
-      'The core Field Generation prompt used by the scheduled flow to write a briefing into a field.',
+      'AI-generated prompt used to write a briefing, summary, or recommendation.',
     tags: ['Account', 'Meeting Preparation'],
     object: 'Account',
     grounding: ['{!$RecordSnapshot:Account.Snapshot}'],

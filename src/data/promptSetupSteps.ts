@@ -42,7 +42,7 @@ export const promptsJourney: Journey = {
   icon: 'sparkles',
   difficulty: 'Beginner to Intermediate Admin',
   purpose:
-    'Build an automation where every morning Salesforce finds target Accounts, runs an AI-generated briefing using Prompt Builder, then saves clean HTML into Account_Meeting_Briefing__c.',
+    'Schedule automated flows that leverage Salesforce AI (Prompt Builder) to generate briefings, summaries, and recommendations — then store the results directly on your records.',
   includes: [
     'Permissions',
     'Rich text field',
@@ -90,7 +90,7 @@ export const promptsJourney: Journey = {
             },
             {
               field: 'Custom field',
-              value: 'Account_Meeting_Briefing__c planned as Rich Text Area',
+              value: 'Create a Rich Text Area field on the target object of your prompt (e.g. Account_Meeting_Briefing__c on Account for a meeting briefing)',
               copyable: true,
             },
           ],

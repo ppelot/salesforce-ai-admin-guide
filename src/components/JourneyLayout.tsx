@@ -112,6 +112,32 @@ export function JourneyLayout({
         </div>
       </div>
 
+      {/* Prompts journey intro */}
+      {journey.id === 'prompts' && (
+        <div className="mt-5 rounded-lg border border-pink-100 p-4" style={{ backgroundColor: '#FEF0F3' }}>
+          <p className="text-sm leading-relaxed text-slate-700">
+            {t('journey.promptsIntro1')}
+            <a
+              href="#/library/account-summary-prompt"
+              className="font-bold text-brand-700 underline hover:text-brand-900"
+            >
+              {t('journey.promptsIntroBold')}
+            </a>
+            {t('journey.promptsIntro2')}
+          </p>
+          <p className="mt-2 text-sm font-medium text-slate-700">
+            {t('journey.promptsIntroNote1')}
+            <a
+              href="#/library"
+              className="font-bold text-brand-700 underline hover:text-brand-900"
+            >
+              {t('journey.promptsIntroNoteLink')}
+            </a>
+            {t('journey.promptsIntroNote2')}
+          </p>
+        </div>
+      )}
+
       {/* Section tabs (jump to any section) */}
       <nav aria-label={t('journey.sectionsNav')} className="mb-5 print-hidden">
         <ol className="flex flex-wrap gap-2">

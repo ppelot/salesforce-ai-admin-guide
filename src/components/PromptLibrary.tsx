@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import {
+  AlertTriangle,
   ArrowLeft,
   BookOpen,
   Database,
@@ -145,6 +146,20 @@ function PromptGrid() {
         </p>
       </header>
 
+      {/* Token consumption warning */}
+      <div
+        className="mb-5 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800"
+        role="alert"
+      >
+        <p className="flex items-start gap-2">
+          <AlertTriangle
+            className="mt-0.5 h-4 w-4 shrink-0 text-amber-500"
+            aria-hidden="true"
+          />
+          <span>{t('library.tokenWarning')}</span>
+        </p>
+      </div>
+
       {/* Tag filter */}
       <div
         className="mb-5 flex flex-wrap gap-2"
@@ -236,6 +251,7 @@ function PromptGrid() {
                 {t('library.copyTemplate')}
               </CopyButton>
             </div>
+
           </article>
         ))}
       </div>

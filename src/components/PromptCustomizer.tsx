@@ -225,6 +225,12 @@ export function PromptCustomizer({ prompt }: { prompt: Prompt }) {
           })()}
         </Callout>
       </div>
+
+      <div className="mt-3">
+        <Callout level="blocker" title="Input Resources">
+          {t('cz.inputWarning')}
+        </Callout>
+      </div>
     </section>
   );
 }

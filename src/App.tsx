@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import {
   BookOpen,
+  Bot,
   Home as HomeIcon,
   Languages,
   Lock,
+  MessageSquareText,
   RotateCcw,
   Search as SearchIcon,
   Sparkles,
@@ -242,7 +244,12 @@ function ResetButton() {
 function Header() {
   const { route, navigate } = useRoute();
   const t = useT();
-  const navLinks: { kind: 'library' | 'troubleshoot' | 'guide'; label: string; icon: typeof BookOpen }[] = [
+  type NavLink =
+    | { kind: 'library' | 'troubleshoot' | 'guide'; label: string; icon: typeof BookOpen; route?: undefined }
+    | { kind: 'journey'; label: string; icon: typeof BookOpen; route: { kind: 'journey'; journeyId: 'agentforce' | 'prompts' } };
+  const navLinks: NavLink[] = [
+    { kind: 'journey', label: t('nav.agentforce'), icon: Bot, route: { kind: 'journey', journeyId: 'agentforce' } },
+    { kind: 'journey', label: t('nav.prompts'), icon: MessageSquareText, route: { kind: 'journey', journeyId: 'prompts' } },
     { kind: 'library', label: t('nav.library'), icon: BookOpen },
     { kind: 'guide', label: 'Flow', icon: Workflow },
     { kind: 'troubleshoot', label: t('nav.troubleshoot'), icon: Stethoscope },
@@ -280,12 +287,15 @@ function Header() {
           </button>
           {navLinks.map((link) => {
             const Icon = link.icon;
-            const active = route.kind === link.kind;
+            const active = link.route
+              ? route.kind === 'journey' && 'journeyId' in route && route.journeyId === link.route.journeyId
+              : route.kind === link.kind;
+            const key = link.route ? `journey-${link.route.journeyId}` : link.kind;
             return (
               <button
-                key={link.kind}
+                key={key}
                 type="button"
-                onClick={() => navigate({ kind: link.kind })}
+                onClick={() => navigate(link.route ?? { kind: link.kind as 'library' | 'troubleshoot' | 'guide' })}
                 aria-current={active ? 'page' : undefined}
                 className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors ${
                   active
@@ -305,21 +315,6 @@ function Header() {
           <LanguageToggle />
           <ModeToggle />
           <ResetButton />
-          <span className="hidden h-4 w-px bg-slate-200 sm:inline" aria-hidden="true" />
-          <a
-            href="https://salesforce.enterprise.slack.com/team/U01G8QJC2AW"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-xs font-medium text-slate-500 hover:text-brand-600 hover:underline"
-          >
-            <img
-              src="https://assets-v2.lottiefiles.com/a/bb1cc7d6-07ca-4b63-807b-7700caf111e0/QYIeYh2AK9.gif"
-              alt=""
-              className="h-4 w-4"
-              aria-hidden="true"
-            />
-            Created by Patrick Pelot
-          </a>
         </div>
       </div>
     </header>

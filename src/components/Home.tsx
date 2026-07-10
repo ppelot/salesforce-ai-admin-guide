@@ -85,7 +85,8 @@ export function Home() {
               key={journey.id}
               type="button"
               onClick={() => navigate({ kind: 'journey', journeyId: journey.id })}
-              className="group flex flex-col rounded-card border border-slate-200 bg-white p-6 text-left card-shadow transition-all hover:-translate-y-0.5 hover:border-brand-300 focus-visible:ring-2"
+              className="group flex flex-col rounded-card border border-slate-200 p-6 text-left card-shadow transition-all hover:-translate-y-0.5 hover:border-brand-300 focus-visible:ring-2"
+              style={{ backgroundColor: journey.id === 'agentforce' ? '#EAF5FE' : journey.id === 'prompts' ? '#F9F0FF' : 'white' }}
             >
               <div className="mb-4 flex items-center justify-between">
                 <span className="rounded-xl bg-brand-50 p-3 text-brand-600 ring-1 ring-inset ring-brand-100">

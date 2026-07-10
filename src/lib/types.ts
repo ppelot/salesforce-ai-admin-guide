@@ -83,6 +83,8 @@ export interface Step {
   gating: StepGating;
   /** Short label used in compact mode instead of the full card. */
   compactLabel?: string;
+  /** Optional preview image URL shown inside the step card (clickable lightbox). */
+  previewImg?: string;
 }
 
 /** A section (Journey 1) or phase (Journey 2). Same shape either way. */

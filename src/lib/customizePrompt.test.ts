@@ -19,8 +19,9 @@ describe('customizePrompt — token safety', () => {
     expect(out).toContain('{!$RecordSnapshot:Account.Snapshot}');
   });
 
-  it('does NOT swap the object noun inside a token when changing object', () => {
-    const template = 'Summarize the Account. Ref: {!$Input:Account.Name}';
+  it('DOES swap the object noun inside tokens when changing object', () => {
+    const template =
+      'Summarize the Account. Ref: {!$Input:Account.Name}. Data: {!$RecordSnapshot:Account.Snapshot}';
     const out = customizePrompt(
       template,
       { ...base, object: 'Opportunity' },
@@ -28,9 +29,11 @@ describe('customizePrompt — token safety', () => {
     );
     // Prose noun swapped…
     expect(out).toContain('Summarize the Opportunity.');
-    // …but the token is untouched.
-    expect(out).toContain('{!$Input:Account.Name}');
-    expect(out).not.toContain('{!$Input:Opportunity.Name}');
+    // …tokens also swapped to new object.
+    expect(out).toContain('{!$Input:Opportunity.Name}');
+    expect(out).toContain('{!$RecordSnapshot:Opportunity.Snapshot}');
+    expect(out).not.toContain('{!$Input:Account.Name}');
+    expect(out).not.toContain('{!$RecordSnapshot:Account.Snapshot}');
   });
 
   it('leaves prose unchanged when object is unchanged', () => {

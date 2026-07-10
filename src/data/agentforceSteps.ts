@@ -83,6 +83,7 @@ export const agentforceJourney: Journey = {
           gating: 'required',
           title: 'Enable Einstein',
           compactLabel: 'Turn on Einstein',
+          previewImg: 'https://i.postimg.cc/nV6M8FNr/Einstein-Setup.jpg',
           summary:
             'Einstein is the foundation for all generative-AI features. It must be on before Agentforce options appear.',
           navPath: {
@@ -119,6 +120,7 @@ export const agentforceJourney: Journey = {
           gating: 'required',
           title: 'Enable Agentforce',
           compactLabel: 'Turn on Agentforce',
+          previewImg: 'https://i.postimg.cc/Qx1CjL3x/Enable-Agentforce.jpg',
           summary:
             'Turn on Agentforce in Agent Studio. This unlocks the Agentforce Coworker setup pages.',
           navPath: {
@@ -155,6 +157,7 @@ export const agentforceJourney: Journey = {
           gating: 'recommended',
           title: 'Enable Data 360 / Data Cloud (if needed)',
           compactLabel: 'Enable Data 360 if needed',
+          previewImg: 'https://i.postimg.cc/R0Vw3CSK/Data-Cloud-Setup.jpg',
           summary:
             'Data 360 (Data Cloud) may be required for connected or external data sources. Enable it if your org has not already.',
           navPath: {
@@ -191,6 +194,7 @@ export const agentforceJourney: Journey = {
           gating: 'required',
           title: 'Confirm admin permission sets',
           compactLabel: 'Assign admin permission sets',
+          previewImg: 'https://i.postimg.cc/13494Lx6/Permission-Set-Coworker.jpg',
           summary:
             'Make sure your own admin user has the two Agentforce Coworker permission sets, or activation may be blocked.',
           navPath: {
@@ -320,6 +324,7 @@ export const agentforceJourney: Journey = {
           ],
           whyItMatters:
             'This is the launch point for the entire activation flow.',
+          previewImg: 'https://i.postimg.cc/g0NQR03K/coworker-step1.jpg',
         },
         {
           id: 'af-t-step2',
@@ -335,6 +340,7 @@ export const agentforceJourney: Journey = {
           ],
           whyItMatters:
             'This page is the control center for activation, data, the end-user experience, and access. Knowing its layout makes the next steps faster.',
+          previewImg: 'https://i.postimg.cc/QN0zyCPN/coworker-turnon.jpg',
         },
         {
           id: 'af-t-step3',
@@ -358,6 +364,7 @@ export const agentforceJourney: Journey = {
               body: 'Agentforce Coworker setup is mostly automated. Some steps can take a few minutes.',
             },
           ],
+          previewImg: 'https://i.postimg.cc/bN4nTXxy/coworker-managedata.jpg',
         },
         {
           id: 'af-t-step4',
@@ -432,6 +439,7 @@ export const agentforceJourney: Journey = {
               body: 'You must click Manage and accept the Beta terms here. Skipping this is the most common reason the Coworker button never appears for users.',
             },
           ],
+          previewImg: 'https://i.postimg.cc/6Bcd4PSz/coworker-turnonuser.jpg',
         },
         {
           id: 'af-t-step7',
@@ -458,6 +466,7 @@ export const agentforceJourney: Journey = {
           ],
           whyItMatters:
             'Only assigned users can see and use Agentforce Coworker, even after the experience is turned on.',
+          previewImg: 'https://i.postimg.cc/RZNBv8yW/coworker-manageuser.jpg',
         },
         {
           id: 'af-t-step8',
